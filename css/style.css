@@ -214,3 +214,69 @@ h1 {
   align-items: center;
   z-index: 1000;
 }
+
+/* ==== MEDIA QUERIES (DESKTOP) ====*/
+@media (min-width: 600px) {
+  body {
+    padding: 40px; /* Kembalikan padding untuk desktop */
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .todo-wrapper {
+    padding: 30px;
+  }
+
+  /* Kembalikan tata letak flex menjadi baris */
+  .input-section,
+  .filter-section {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .input-section input[type="text"],
+  .input-section input[type="date"] {
+    flex: 1;
+    width: auto;
+  }
+
+  #add-btn {
+    padding: 0 15px; /* Kembalikan padding */
+  }
+
+  #filter-btn,
+  #delete-all-btn {
+    width: auto;
+  }
+
+  .dropdown {
+    top: 319px; /* Kembalikan posisi awal dropdown */
+    left: auto;
+    right: auto;
+  }
+
+  /* Kembalikan tata letak tabel ke bentuk semula */
+  .task-table thead {
+    display: table-header-group;
+  }
+
+  .task-table tbody tr {
+    display: table-row;
+    border-bottom: 1px solid #333;
+    background-color: #1e2538;
+    margin-bottom: 0;
+    padding: 0;
+    border-radius: 0;
+  }
+
+  .task-table tbody td {
+    display: table-cell;
+    padding: 10px;
+  }
+
+  .task-table tbody td::before {
+    content: none;
+  }
+}
