@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Todo List Selly</title>
+  </head>
+  <body>
+    <div class="todo-wrapper">
+      <h1>Todo List</h1>
+
+      <div class="input-section">
+        <input type="text" id="new-task" placeholder="Add your task..." />
+        <div class="date-wrapper">
+          <input type="date" id="task-date" />
+        </div>
+        <button id="add-btn">+</button>
+      </div>
+
+      <div class="filter-section">
+        <button id="filter-btn">Filter</button>
+        <div class="dropdown">
+          <button class="option">All</button>
+          <button class="option">Pending</button>
+          <button class="option">Completed</button>
+        </div>
+        <button id="delete-all-btn">Delete All</button>
+      </div>
+
+      <div id="notif" class="hidden">Semua tugas berhasil dihapus!</div>
+
+      <table class="task-table">
+        <thead>
+          <tr>
+            <th>Task</th>
+            <th>Date</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="task-list"></tbody>
+      </table>
+    </div>
+  </body>
+  <script src="./js/script.js"></script>
+</html>
