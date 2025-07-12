@@ -53,14 +53,16 @@ function renderTodos(filter = "All") {
     const tr = document.createElement("tr");
 
     tr.innerHTML = `
-      <td>${todo.text}</td>
-      <td>${todo.date || "-"}</td>
-      <td class="status">${todo.completed ? "Completed" : "Pending"}</td>
-      <td>
+    <td data-label="Task">${todo.text}</td>
+    <td data-label="Date">${todo.date || "-"}</td>
+    <td data-label="Status" class="status">${
+      todo.completed ? "Completed" : "Pending"
+    }</td>
+    <td data-label="Actions">
         <button class="action-btn edit-btn">✏️</button>
         <button class="action-btn complete-btn">✅</button>
         <button class="action-btn delete-btn">🗑️</button>
-      </td>
+    </td>
     `;
 
     // Aksi: edit
